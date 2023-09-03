@@ -9,19 +9,20 @@ headers ={
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36'
 }
 #url = 'https://www.instagram.com/p/CtTmD-AObNp/?igshid=MzRlODBiNWFlZA%3D%3D'
-url = 'https://www.instagram.com/p/CwIBlP6vMWK/?igshid=MzRlODBiNWFlZA=='
+""" PLEASE PASTE YOUR LINK HERE!!! """
+url = 'paste your link here!!!'  # paste your link here!!!
 
-def get_next():
+def get_next():  #get next page
     button = driver.find_element(By.XPATH, '//div[@class=" _9zm2"]')
     driver.execute_script("arguments[0].click();", button)
     time.sleep(1)
 
-def get_first_page():
+def get_first_page(): #get the information of first page
     url = driver.find_element(By.XPATH, '//*[@class="_acay"]/li[2]/div/div/div/div/div/img').get_attribute('src')
     return url
     time.sleep(2)
 
-def get_other_pages():
+def get_other_pages(): #get the information of other pages
     url_2 = driver.find_element(By.XPATH, '//*[@class="_acay"]/li[3]/div/div/div/div/div/img').get_attribute('src')
     return url_2
 
